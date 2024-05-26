@@ -87,7 +87,7 @@ main {
 .table-wrapper {
   border: 1px solid var(--grey);
   border-radius: 12px;
-  padding: 4px;
+  padding: 5px 2px;
   margin-top: 10px;
 }
 table {
@@ -111,7 +111,9 @@ table td {
   padding: 16px;
   text-align: left;
 }
-table tr {
+table thead tr {
+  border-top-left-radius: 12px;
+  background-color: var(--light-grey);
   vertical-align: middle;
   border-bottom: 1px solid var(--grey);
 }
@@ -127,8 +129,10 @@ table tr:last-child td {
   border-bottom: none;
 }
 table th {
-  background-color: var(--light-grey);
   border-radius: 10px;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
+
 }
 .not-found {
   text-align: center;
@@ -157,4 +161,11 @@ table th {
   color: var(--secondary);
   border-radius: 16px !important;
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 2%;
+    margin: 0px;
+  }
 }
